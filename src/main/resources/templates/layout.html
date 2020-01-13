@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" class="fixed" >
+<th:block layout:insert="~{fragments/frag_htmlhead}"/>
+	<body>
+		<section class="body">
+
+			<!-- start: header -->
+	<th:block layout:insert="~{fragments/frag_header}"/>
+			<!-- end: header -->
+
+			<div class="inner-wrapper">
+				<!-- start: sidebar -->
+<th:block layout:insert="~{fragments/frag_sidebar}"/>
+				<!-- end: sidebar -->
+				
+				<section layout:fragment="content"></section>
+
+			</div>
+
+
+		</section>
+		
+		<th:block layout:insert="~{fragments/frag_scripts}"/>
+
+
+
+	</body>
+</html>

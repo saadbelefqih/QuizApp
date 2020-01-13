@@ -2,6 +2,9 @@ package ma.ac.fsac.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
@@ -12,6 +15,8 @@ import lombok.ToString;
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor @ToString
 public class Question {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idQuestion;
 	@ManyToOne
 	private Quiz quiz;

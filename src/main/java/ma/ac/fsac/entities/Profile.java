@@ -15,7 +15,7 @@ import lombok.ToString;
 @Data @NoArgsConstructor @ToString @AllArgsConstructor
 public class Profile {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long profileId;
 	@Column(unique=true)
     private String name;

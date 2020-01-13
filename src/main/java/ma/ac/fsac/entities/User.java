@@ -39,9 +39,9 @@ public abstract class User {
 	private String prenomUser;
 	private String adresse;
 	private String photoUser;
-	@Column(name = "active", columnDefinition = "boolean default true", nullable = false)
-	private Boolean active=true;
-	@Column(name = "active", columnDefinition = "boolean default false", nullable = false)
+	@Column(name = "active", columnDefinition = "boolean default false",nullable=false)
+	private Boolean active;
+	@Column(name = "connected", columnDefinition = "boolean default false", nullable = false)
 	private Boolean connected=false;
 	@Column(unique=true)
 	@NotNull

@@ -24,16 +24,17 @@ public class Classe {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idClasse;
 	private String nomClasse;
+	private String descClasse;
 	@OneToMany(fetch=FetchType.LAZY,mappedBy="classe")
 	private List<Etudiant> etudiants;
 	@ManyToMany(fetch=FetchType.LAZY)
 	 @JoinTable(name = "Classe_PROF",
      joinColumns = {
              @JoinColumn(name = "idClasse", referencedColumnName = "idClasse",
-                     nullable = false, updatable = false)},
+                     nullable = false)},
      inverseJoinColumns = {
              @JoinColumn(name = "idprofesseur", referencedColumnName = "idUser",
-                     nullable = false, updatable = false)})
+                     nullable = false)})
 	private List<Professeur> professeurs;
 
 }
